@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style>
+        body {
+            background-color: cornsilk;
+        }
+        button {
+            color: brown;
+            background-color: cornsilk;
+            border-color: brown;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 10px;
+            font-family: serif;
+            margin-left: 40%;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: brown;
+            color: cornsilk;
+        }
+        button:active {
+            -webkit-transform: translateY(4px);
+             transform: translateY(4px);
+             box-shadow: 0px 0px 1px brown;
+             border-bottom: none;
+        }
+        h1 {
+            color: gold;
+            font-size: 150px;
+            text-align: center;
+            margin-top: 150px;
+            font-family: "ＭＳ Ｐ明朝";
+        }
+    </style>
+
+    <body>
+        <h1>運試し!</h1>
+        <button id="omikuji">おみくじを引く</button>
+
+        <script>
+            const omikuji = document.getElementById("omikuji")
+            omikuji.addEventListener("click", () => {
+                const value = Math.random()
+                if(value > 0.95) {
+                    alert("大吉")
+                } else if(value > 0.6) {
+                    alert("中吉")
+                } else if(value > 0.2) {
+                    alert("吉")
+                } else {
+                    alert("凶")
+                }
+            })
+        </script>
+    </body>
+</html>
